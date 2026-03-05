@@ -57,3 +57,36 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Actividad Colaborativa: Maquetado Estructural en HTML con clases CSS
+**Proyecto:** Directorio de ONGs (Laravel)
+**Equipo:** * Anguiano García Ángel Yahir Guadalupe
+* Figueroa Robles Axel Israel
+
+---
+
+## 1. ¿Cómo respetamos el wireframe?
+Para mantener una fidelidad total entre el wireframe aprobado y el maquetado HTML, nos enfocamos exclusivamente en la "obra negra" del sitio. 
+* **Estructura Semántica:** Mapeamos cada bloque del wireframe a su etiqueta semántica de HTML5 correspondiente (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`).
+* **Fidelidad Estructural:** Respetamos la jerarquía visual y la ubicación exacta de los bloques (por ejemplo, manteniendo las barras laterales (`<aside>`) donde el diseño lo indicaba).
+* **Cero Diseño Visual:** Evitamos estrictamente el uso de colores de marca, tipografías personalizadas o imágenes reales. En su lugar, utilizamos textos de prueba, placeholders para las imágenes y un borde punteado gris (`border: 1px dashed #ccc`) genérico en los contenedores principales para evidenciar la delimitación de las áreas.
+
+## 2. Sistema de distribución utilizado (Flexbox y Grid)
+Para lograr la distribución de los elementos de manera estructurada y responsiva, implementamos una combinación de **CSS Grid** y **Flexbox**, dependiendo de la necesidad del bloque:
+* **CSS Grid:** Lo utilizamos para las secciones que requerían una distribución de columnas estricta y bidimensional. Por ejemplo, la clase `.grid-tres-columnas` (`grid-template-columns: repeat(3, 1fr)`) se usó para la sección de "Capacidades" y "Áreas de Trabajo", mientras que `.grid-dos-columnas` se aplicó en las "Ventajas".
+* **Flexbox:** Lo implementamos para alineaciones unidimensionales y distribución de espacio interno. Se usó en el `header` (para separar el logo y el menú de navegación), en las tarjetas individuales (para apilar iconos, títulos y botones de forma vertical) y en la estructura general móvil mediante *Media Queries* para colapsar los elementos a una sola columna.
+
+## 3. ¿Cómo definimos las proporciones?
+Las proporciones se establecieron buscando imitar el peso visual del wireframe original sin depender de medidas fijas en píxeles que rompieran la adaptabilidad:
+* **Contenedores Máximos:** Utilizamos un `.contenedor-principal` con un `max-width: 1200px` y márgenes automáticos (`margin: 0 auto`) para centrar el contenido y mantener los márgenes laterales como en el diseño de escritorio.
+* **Unidades Relativas:** En CSS Grid utilizamos la unidad fraccional `fr` para asegurar que las columnas midieran exactamente lo mismo y se repartieran el espacio equitativamente.
+* **Flex-grow:** En las secciones divididas a la mitad (como el bloque "Hero" con texto de un lado y una imagen del otro), utilizamos la propiedad `flex: 1` para que ambas áreas tomaran exactamente el 50% de la proporción disponible, respetando la asimetría o simetría plasmada en los dibujos.
+
+---
+
+##  Ejecución del Proyecto en Laravel
+1. Instalar dependencias: `composer install` y `npm install`.
+2. Compilar el CSS estructural: `npm run dev`.
+3. Levantar el servidor local: `php artisan serve`.
+4. Navegar por los enlaces del menú para visualizar las 10 pantallas renderizadas a través del sistema de plantillas Blade.
