@@ -61,7 +61,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # Actividad Colaborativa: Maquetado Estructural en HTML con clases CSS
 **Proyecto:** Directorio de ONGs (Laravel)
-**Equipo:** * Anguiano García Ángel Yahir Guadalupe
+**Equipo:**
+* Anguiano García Ángel Yahir Guadalupe
 * Figueroa Robles Axel Israel
 
 ---
