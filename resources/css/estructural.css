@@ -1,109 +1,254 @@
-/* Reset básico para visualización de bloques */
+/* ================= RESET BÁSICO ESTRUCTURAL ================= */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: sans-serif; /* Tipografía genérica solo para leer la estructura */
+    line-height: 1.5;
+    padding-bottom: 50px;
 }
 
-/* Contenedores Principales */
+ul {
+    list-style: none;
+}
+
+/* ================= CLASES DE CONTENEDORES Y ÁREAS ================= */
 .contenedor-principal {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    /* Borde punteado para evidenciar la estructura en las capturas del PDF */
+    border: 1px dashed #ccc; 
+    margin-bottom: 20px;
 }
 
+/* ================= GRIDS Y FLEXBOX REUTILIZABLES ================= */
+.grid-tres-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.grid-dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.layout-dos-columnas-align {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.align-top {
+    align-items: flex-start;
+}
+
+/* ================= HEADER ================= */
 .area-header {
+    border-bottom: 2px solid #eee;
+}
+
+.layout-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #ddd; /* Gris estructural */
-    border-bottom: 2px solid #bbb;
+    margin-bottom: 0;
+    border: none;
 }
 
 .menu-principal ul {
     display: flex;
-    list-style: none;
-    gap: 15px;
-}
-
-.contenido-central {
-    flex: 1;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Distribución de Columnas (Para Directorio y Secciones) */
-.seccion-columnas {
-    display: flex;
     gap: 20px;
-    margin: 20px 0;
 }
 
-.columna-principal { flex: 3; border: 1px dashed #999; padding: 10px; }
-.barra-lateral { flex: 1; border: 1px dashed #999; padding: 10px; }
+/* ================= SECCIONES INICIO (INDEX) ================= */
+.seccion-hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
-/* Bloques de Contenido */
-.bloque-grilla {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.hero-texto {
+    flex: 1;
+}
+
+.hero-botones {
+    margin-top: 20px;
+    display: flex;
     gap: 15px;
 }
 
-.tarjeta-estructura {
-    height: 200px;
-    background-color: #eee;
-    border: 1px solid #ccc;
+.hero-imagen {
+    flex: 1;
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 300px;
+    background-color: #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #ccc;
 }
 
-.pie-pagina {
-    padding: 30px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+.placeholder-img-pequena {
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
 }
 
-/* Manejo de Grillas (Grid) para fidelidad al wireframe */
-.bloque-grilla {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+/* Tarjetas base */
+.tarjeta-capacidad, .tarjeta-ventaja, .tarjeta-equipo, .tarjeta-ong, .tarjeta-area, .tarjeta-noticia, .caja-registro {
+    border: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icono-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* ================= CLASES PARA LAS OTRAS 9 PÁGINAS ================= */
+.layout-directorio {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.barra-lateral-filtros, .barra-lateral-blog {
+    flex: 0 0 250px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fcfcfc;
+}
+
+.seccion-lista-ongs, .seccion-feed-noticias {
+    flex: 1;
+}
+
+/* Formularios estructurales */
+.formulario-estructural, .plataforma-busqueda {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 20px;
 }
 
-/* Campos de formulario estructurales */
-.campo-control {
-    margin-bottom: 15px;
+.formulario-estructural input, 
+.formulario-estructural textarea, 
+.formulario-estructural select,
+.plataforma-busqueda input {
     padding: 10px;
     border: 1px solid #ccc;
-    background: #f9f9f9;
 }
 
-.input-placeholder {
-    height: 30px;
-    background: #fff;
+fieldset {
+    padding: 10px;
     border: 1px solid #ddd;
+    margin-bottom: 10px;
 }
 
-/* Contenedores para páginas de texto (Sobre nosotros / FAQ) */
-.contenedor-centrado-angosto {
+/* Secciones Legales */
+.seccion-legal {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.item-faq {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+.bloque-legal {
+    margin-top: 30px;
+}
+
+.opcion-cookie {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/* ================= FOOTER ================= */
+.pie-pagina {
+    background-color: #f9f9f9;
+    padding-top: 40px;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
+    border: none;
+}
+
+.footer-enlaces ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding-top: 20px;
+}
+
+.legal-enlaces {
+    display: flex;
+    gap: 20px;
+}
+
+/* ================= ADAPTACIÓN MÓVIL ================= */
+@media (max-width: 768px) {
+    .layout-header, 
+    .seccion-hero, 
+    .layout-dos-columnas-align, 
+    .footer-legal,
+    .layout-directorio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .grid-tres-columnas, 
+    .grid-dos-columnas, 
+    .grid-footer {
+        grid-template-columns: 1fr; /* Pasa todo a 1 columna */
+    }
+
+    .menu-principal ul, .footer-enlaces ul, .legal-enlaces {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .barra-lateral-filtros, .barra-lateral-blog {
+        width: 100%;
+        flex: none;
+    }
 }
