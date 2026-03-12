@@ -91,3 +91,61 @@ Las proporciones se establecieron buscando imitar el peso visual del wireframe o
 2. Compilar el CSS estructural: `npm run dev`.
 3. Levantar el servidor local: `php artisan serve`.
 4. Navegar por los enlaces del menú para visualizar las 10 pantallas renderizadas a través del sistema de plantillas Blade.
+
+
+
+
+
+Sengunda parte 
+# Directorio de ONGs - Diseño Visual y Maquetado
+
+Este proyecto es el resultado de la **Actividad 9: Desarrollo de Mockups a partir de los wireframes** para la materia de **Gráficos, Interfaces y Usabilidad**.
+
+##  Equipo de Desarrollo
+* Anguiano García Ángel Yahir Guadalupe
+* Figueroa Robles Axel Israel
+
+---
+
+##  Objetivo del Proyecto
+Aplicar el diseño visual de los mockups (creados en Relume.io) sobre el maquetado HTML estructural previamente desarrollado. El objetivo principal fue integrar un framework CSS (Bootstrap 5) para dar estilo, color y jerarquía visual a 10 páginas, sin alterar en absoluto la estructura semántica original del wireframe.
+
+---
+
+##  Justificación Técnica (Requerimientos de la Rúbrica)
+
+### 1. ¿Cómo implementamos el diseño de los mockups en el sitio web?
+Implementamos el diseño visual integrando el framework **Bootstrap 5** directamente sobre el maquetado estructural previamente desarrollado en Laravel. No se alteró la semántica HTML (`<header>`, `<main>`, `<section>`, `<footer>`); en su lugar, mapeamos las áreas estructurales del wireframe hacia el sistema de cuadrículas (Grid System) y componentes de Bootstrap. Sobrescribimos en CSS únicamente las variables de color nativas (`--bs-primary`, `--bs-secondary`) para que los tonos coincidieran de manera idéntica con la paleta de colores corporativa de nuestro Mockup original.
+
+### 2. ¿Qué clases y componentes del framework utilizamos?
+Se utilizaron rigurosamente las clases de utilidad de Bootstrap tal como se solicita en los requerimientos:
+* **Tipografía y Color:** `display-4`, `display-5`, `h1`, `h4`, `fw-bold`, `text-center`, `text-white`, `text-secondary`. Los colores de fondo se controlaron con `bg-primary` (Azul Navy corporativo) y `bg-secondary` (Verde suave).
+* **Componentes:** Se implementó el componente `card` (con utilidades como `border-0`, `shadow-sm`, `rounded-4`) para las áreas de "Capacidades" y "Ventajas", y las clases `btn btn-info` y `btn-outline-light` para los botones interactivos, así como `form-control` para los inputs y textareas del footer y la página de contacto.
+* **Alineación y Espaciado:** Utilizamos extensivamente `d-flex`, `justify-content-between` y `align-items-center` para los menús y cabeceras. El sistema de grillas se armó con contenedores responsivos mediante `container`, `row` y `col-md-*`. Los espaciados se controlaron con utilidades como `p-3`, `py-5`, `mt-4`, `mb-5` y `gap-3`.
+
+### 3. ¿Cómo mantuvimos la estructura del maquetado original?
+El diseño se adaptó al maquetado existente a través de la herencia de plantillas del motor **Blade en Laravel** (`app.blade.php`). El *Header*, *Menú de navegación*, *Área principal* y *Footer* conservaron sus etiquetas contenedoras intactas. El framework Bootstrap se inyectó a través de CDN en el `<head>`, limitando nuestra intervención a la pura asignación de atributos `class="..."` a los elementos ya existentes y estructurando el contenido en las 10 vistas hijas mediante `@yield('content')`.
+
+### 4. ¿Qué dificultades encontramos y cómo las resolvimos?
+* **Dificultad 1:** Bootstrap impone una paleta de colores estándar (azul, gris, verde genéricos) que rompía con la identidad visual de nuestro Mockup.
+  * **Solución:** En lugar de crear clases CSS redundantes y ensuciar el HTML, utilizamos nuestro archivo `estructural.css` para redefinir el valor RGB de las variables nativas de Bootstrap en el pseudo-elemento `:root` (ej. sobrescribiendo `--bs-primary` con nuestro color *Navy*).
+* **Dificultad 2:** El acomodo de las tarjetas de la sección "Capacidades", donde el texto blanco debía ir sobre una imagen fotográfica clara, lo que dificultaba la lectura.
+  * **Solución:** Combinamos el componente `card` de Bootstrap con una clase CSS propia (`card-overlay`) que aplica un degradado `linear-gradient` oscuro, garantizando la jerarquía visual y la perfecta legibilidad requerida sin necesidad de editar las imágenes originales.
+
+### 5. ¿Cómo distribuimos el trabajo en el equipo?
+El trabajo se dividió de forma equitativa y colaborativa:
+* **Ángel Yahir:** Implementación del framework Bootstrap mediante CDN, refactorización del layout principal (`app.blade.php`), enrutamiento del sistema de navegación dinámica en Laravel (`web.php`) y estructuración visual de formularios y botones con `form-control` y `btn`.
+* **Axel Israel:** Refactorización del Grid System de Bootstrap en las 10 vistas hijas (sustituyendo CSS puro por `row` y `col-md-*`), gestión de variables CSS de sobrescritura de color (`:root`), y aplicación matemática de las clases de espaciado (`p-*, m-*, g-*`) para igualar las proporciones exactas del mockup original. 
+
+
+
+---
+
+##  Cómo ejecutar el proyecto localmente
+
+Para visualizar la interfaz final en tu navegador, sigue estos pasos en tu terminal:
+
+1. **Clonar el repositorio y entrar a la carpeta:**
+   ```bash
+   git clone <url-del-repositorio>
+   cd ongs
