@@ -1,254 +1,137 @@
-/* ================= RESET BÁSICO ESTRUCTURAL ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ================= IMPORTAR FUENTES ================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap');
+
+/* ================= PALETA DE COLORES EXACTA ================= */
+:root {
+    --bg-navy: #0A2540;      /* Azul oscuro para Header y Footer */
+    --bg-verde: #B3D4B3;     /* Verde claro para Plataforma y Testimonios */
+    --bg-gris: #AFAFAF;      /* Gris para Preguntas */
+    --btn-azul: #2D74DA;     /* Azul brillante para botones principales */
+    --btn-gris: #E2E8F0;     /* Gris claro para botones secundarios */
+    --texto-oscuro: #1A202C; /* Negro suave para mejor lectura */
+    --blanco: #FFFFFF;
 }
 
+/* ================= RESET ================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: sans-serif; /* Tipografía genérica solo para leer la estructura */
-    line-height: 1.5;
-    padding-bottom: 50px;
+    font-family: 'Inter', sans-serif;
+    color: var(--texto-oscuro);
+    line-height: 1.6;
 }
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-ul {
-    list-style: none;
-}
-
-/* ================= CLASES DE CONTENEDORES Y ÁREAS ================= */
+/* ================= CONTENEDORES GLOBALES ================= */
 .contenedor-principal {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
-    /* Borde punteado para evidenciar la estructura en las capturas del PDF */
-    border: 1px dashed #ccc; 
-    margin-bottom: 20px;
+    padding: 60px 20px;
 }
+.seccion-full-width { width: 100%; }
 
-/* ================= GRIDS Y FLEXBOX REUTILIZABLES ================= */
-.grid-tres-columnas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 30px;
-}
+/* ================= UTILIDADES DE COLOR ================= */
+.bg-navy { background-color: var(--bg-navy); color: var(--blanco); }
+.bg-verde { background-color: var(--bg-verde); color: var(--texto-oscuro); }
+.bg-gris { background-color: var(--bg-gris); color: var(--texto-oscuro); }
 
-.grid-dos-columnas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-top: 30px;
-}
-
-.layout-dos-columnas-align {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-}
-
-.align-top {
-    align-items: flex-start;
-}
-
-/* ================= HEADER ================= */
-.area-header {
-    border-bottom: 2px solid #eee;
-}
-
+/* ================= HEADER Y FOOTER ================= */
 .layout-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    margin-bottom: 0;
+    padding: 20px 20px; /* Header un poco más delgado */
+}
+.logo-script { font-family: 'Pacifico', cursive; font-size: 28px; }
+.menu-principal ul { display: flex; gap: 30px; font-weight: 500; }
+.menu-principal a:hover, .footer-enlaces a:hover { opacity: 0.7; }
+
+/* ================= BOTONES ================= */
+button {
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
     border: none;
+    font-size: 16px;
+    transition: 0.3s;
 }
+.btn-primario { background-color: var(--btn-azul); color: var(--blanco); }
+.btn-primario:hover { background-color: #1b5cb8; }
+.btn-secundario { background-color: var(--btn-gris); color: var(--texto-oscuro); }
+.btn-secundario:hover { background-color: #cbd5e1; }
+.btn-outline { background-color: transparent; border: 1px solid rgba(255,255,255,0.3); color: white;}
 
-.menu-principal ul {
-    display: flex;
-    gap: 20px;
-}
-
-/* ================= SECCIONES INICIO (INDEX) ================= */
+/* ================= HERO (Inicio) ================= */
 .seccion-hero {
     display: flex;
     align-items: center;
     gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
+.hero-texto { flex: 1; }
+.hero-texto h1 { font-size: 48px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; letter-spacing: -1px; }
+.hero-texto p { font-size: 18px; margin-bottom: 30px; color: #4A5568; }
+.hero-botones { display: flex; gap: 15px; }
+.hero-imagen { flex: 1; border-radius: 16px; overflow: hidden; }
+.hero-img-real { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-.hero-texto {
-    flex: 1;
-}
+/* ================= PLATAFORMA (Verde) ================= */
+.layout-dos-columnas-align { display: flex; justify-content: space-between; gap: 60px; align-items: flex-start; }
+.columna-izq h2 { font-size: 42px; font-weight: 800; }
+.columna-der p { font-size: 18px; margin-bottom: 20px; }
 
-.hero-botones {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-.hero-imagen {
-    flex: 1;
-}
-
-.placeholder-img {
-    width: 100%;
-    height: 300px;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
-}
-
-.placeholder-img-pequena {
-    width: 100%;
-    height: 150px;
-    background-color: #f0f0f0;
-    margin-bottom: 15px;
-}
-
-/* Tarjetas base */
-.tarjeta-capacidad, .tarjeta-ventaja, .tarjeta-equipo, .tarjeta-ong, .tarjeta-area, .tarjeta-noticia, .caja-registro {
-    border: 1px solid #ddd;
-    padding: 20px;
+/* ================= TARJETAS: CAPACIDADES (Imágenes de fondo) ================= */
+.grid-tres-columnas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+.tarjeta-capacidad {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 30px;
+    height: 350px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+    justify-content: flex-end; /* Manda el texto hacia abajo */
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
+/* Efecto de cristal oscuro sobre la foto para que se lea el texto */
+.overlay-oscuro {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8));
+    z-index: 1;
+}
+.tarjeta-capacidad * { position: relative; z-index: 2; }
+.icono-blanco { width: 30px; margin-bottom: 15px; }
+.tarjeta-capacidad h3 { font-size: 24px; margin-bottom: 10px; }
+.tarjeta-capacidad a { color: white; display: block; margin-top: 15px; }
 
-.icono-placeholder {
-    width: 50px;
-    height: 50px;
-    background-color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+/* ================= TARJETAS: VENTAJAS (Imagen arriba) ================= */
+.grid-dos-columnas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 40px; }
+.tarjeta-ventaja {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
+.tarjeta-ventaja img { width: 100%; height: 250px; object-fit: cover; }
+.tarjeta-ventaja-contenido { padding: 30px; }
+.tarjeta-ventaja-contenido span { font-size: 12px; font-weight: 700; color: #718096; text-transform: uppercase; }
+.tarjeta-ventaja-contenido h3 { font-size: 28px; margin: 10px 0; }
+.tarjeta-ventaja-botones { display: flex; gap: 15px; align-items: center; margin-top: 20px; }
 
-/* ================= CLASES PARA LAS OTRAS 9 PÁGINAS ================= */
-.layout-directorio {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-.barra-lateral-filtros, .barra-lateral-blog {
-    flex: 0 0 250px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #fcfcfc;
-}
-
-.seccion-lista-ongs, .seccion-feed-noticias {
-    flex: 1;
-}
-
-/* Formularios estructurales */
-.formulario-estructural, .plataforma-busqueda {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.formulario-estructural input, 
-.formulario-estructural textarea, 
-.formulario-estructural select,
-.plataforma-busqueda input {
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-fieldset {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-/* Secciones Legales */
-.seccion-legal {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.bloque-legal {
-    margin-top: 30px;
-}
-
-.opcion-cookie {
-    border: 1px solid #eee;
-    padding: 15px;
-    margin-bottom: 10px;
-}
+/* ================= PREGUNTAS (Gris) ================= */
+.seccion-preguntas { text-align: center; }
+.faq-lista { max-width: 800px; margin: 40px auto; text-align: left; }
+.faq-item { margin-bottom: 30px; }
 
 /* ================= FOOTER ================= */
-.pie-pagina {
-    background-color: #f9f9f9;
-    padding-top: 40px;
-}
+.grid-footer { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-formulario input { width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; }
+.footer-formulario input::placeholder { color: #ccc; }
+.footer-legal { display: flex; justify-content: space-between; padding-top: 20px; font-size: 14px; color: #ccc; }
 
-.grid-footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 30px;
-    border: none;
-}
-
-.footer-enlaces ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.footer-formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-legal {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #ddd;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    padding-top: 20px;
-}
-
-.legal-enlaces {
-    display: flex;
-    gap: 20px;
-}
-
-/* ================= ADAPTACIÓN MÓVIL ================= */
-@media (max-width: 768px) {
-    .layout-header, 
-    .seccion-hero, 
-    .layout-dos-columnas-align, 
-    .footer-legal,
-    .layout-directorio {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .grid-tres-columnas, 
-    .grid-dos-columnas, 
-    .grid-footer {
-        grid-template-columns: 1fr; /* Pasa todo a 1 columna */
-    }
-
-    .menu-principal ul, .footer-enlaces ul, .legal-enlaces {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .barra-lateral-filtros, .barra-lateral-blog {
-        width: 100%;
-        flex: none;
-    }
-}
+/* Inputs en general */
+input, textarea { padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Inter'; width: 100%; }
