@@ -24,9 +24,14 @@
     <section class="container text-center py-5 mt-5">
         <h2 class="h1 fw-bold mb-5">Nuestro Equipo</h2>
         <div class="row g-4 text-start justify-content-center">
+
+            <!-- Integrante 1 -->
             <article class="col-md-5">
                 <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-                    <img src="{{ asset('img/equipo1.jpg') }}" alt="Foto perfil" class="card-img-top" style="height:300px; object-fit:cover; background:#e2e8f0;">
+                    <img src="{{ asset('img/IMG4.jpg') }}" 
+                         alt="Foto perfil 1" 
+                         class="card-img-top" 
+                         style="height:300px; object-fit:cover; object-position: center 40%;">
                     <div class="card-body p-4">
                         <span class="text-uppercase fw-bold text-secondary small">Director</span>
                         <h3 class="h4 fw-bold mt-2">Nombre Integrante 1</h3>
@@ -34,9 +39,14 @@
                     </div>
                 </div>
             </article>
+
+            <!-- Integrante 2 -->
             <article class="col-md-5">
                 <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-                    <img src="{{ asset('img/equipo2.jpg') }}" alt="Foto perfil" class="card-img-top" style="height:300px; object-fit:cover; background:#e2e8f0;">
+                    <img src="{{ asset('img/IMG3.jpg') }}" 
+                         alt="Foto perfil 2" 
+                         class="card-img-top" 
+                         style="height:300px; object-fit:cover;">
                     <div class="card-body p-4">
                         <span class="text-uppercase fw-bold text-secondary small">Desarrollo</span>
                         <h3 class="h4 fw-bold mt-2">Nombre Integrante 2</h3>
@@ -44,6 +54,7 @@
                     </div>
                 </div>
             </article>
+
         </div>
     </section>
 @endsection

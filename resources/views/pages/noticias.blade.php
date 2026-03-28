@@ -7,11 +7,20 @@
                 <h1 class="display-5 fw-bold mb-5">Noticias del Sector</h1>
                 
                 <article class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
-                    <div style="height:350px; background:#e2e8f0;"></div>
+                    
+                    <!-- IMAGEN -->
+                    <div style="height:350px;">
+                        <img src="{{ asset('img/IMG5.jpg') }}" 
+                             alt="Noticia principal"
+                             style="width:100%; height:100%; object-fit:cover; object-position:center;">
+                    </div>
+
                     <div class="card-body p-5">
                         <span class="text-info fw-bold small text-uppercase">15 de Octubre, 2025</span>
                         <h2 class="display-6 fw-bold mt-2 mb-3">Título de la noticia principal</h2>
-                        <p class="fs-5 text-secondary mb-4">Resumen del artículo de prueba estructural. Avances en el desarrollo del tercer sector y sus aportaciones.</p>
+                        <p class="fs-5 text-secondary mb-4">
+                            Resumen del artículo de prueba estructural. Avances en el desarrollo del tercer sector y sus aportaciones.
+                        </p>
                         <button class="btn btn-outline-dark fw-bold px-4">Leer más</button>
                     </div>
                 </article>

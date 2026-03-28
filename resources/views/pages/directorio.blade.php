@@ -35,26 +35,49 @@
 
             <section class="col-md-9">
                 <div class="row g-4">
+
+                    <!-- ONG 1 -->
                     <article class="col-md-6">
                         <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                            <div style="height:200px; background:#e2e8f0;"></div>
+                            
+                            <!-- IMAGEN -->
+                            <div style="height:200px;">
+                                <img src="{{ asset('img/IMG1.jpg') }}" 
+                                     alt="ONG 1"
+                                     style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+
                             <div class="card-body p-4">
                                 <h3 class="h4 fw-bold">Nombre de ONG 1</h3>
                                 <p class="text-secondary">Descripción estructural de la organización y su impacto social.</p>
-                                <a href="#" class="text-info fw-bold text-decoration-none mt-2 d-inline-block">Ver perfil completo ></a>
+                                <a href="#" class="text-info fw-bold text-decoration-none mt-2 d-inline-block">
+                                    Ver perfil completo >
+                                </a>
                             </div>
                         </div>
                     </article>
+
+                    <!-- ONG 2 -->
                     <article class="col-md-6">
                         <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                            <div style="height:200px; background:#e2e8f0;"></div>
+                            
+                            <!-- IMAGEN -->
+                            <div style="height:200px;">
+                                <img src="{{ asset('img/IMG2.jpg') }}" 
+                                     alt="ONG 2"
+                                     style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+
                             <div class="card-body p-4">
                                 <h3 class="h4 fw-bold">Nombre de ONG 2</h3>
                                 <p class="text-secondary">Descripción estructural de la organización y su impacto social.</p>
-                                <a href="#" class="text-info fw-bold text-decoration-none mt-2 d-inline-block">Ver perfil completo ></a>
+                                <a href="#" class="text-info fw-bold text-decoration-none mt-2 d-inline-block">
+                                    Ver perfil completo >
+                                </a>
                             </div>
                         </div>
                     </article>
+
                 </div>
             </section>
         </div>
