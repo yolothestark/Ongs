@@ -48,3 +48,7 @@ Route::get('/terminos-servicio', function () {
 Route::get('/configuracion-cookies', function () {
     return view('pages.configuracion-cookies');
 })->name('configuracion-cookies');
+
+Route::get('/preguntas-frecuentes', function () {
+    return view('pages.faq');
+})->name('faq');

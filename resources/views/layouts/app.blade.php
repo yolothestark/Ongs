@@ -7,7 +7,7 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @vite(['resources/css/estructural.css'])
 </head>
 
@@ -31,6 +31,7 @@
                     <li><a href="{{ route('sobre-nosotros') }}" class="text-white text-decoration-none">Sobre nosotros</a></li>
                     <li><a href="{{ route('directorio') }}" class="text-white text-decoration-none">Directorio de ONGs</a></li>
                     <li><a href="{{ route('areas-trabajo') }}" class="text-white text-decoration-none">Áreas de trabajo</a></li>
+                    <li><a href="{{ route('faq') }}" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
                 </ul>
             </nav>
 
