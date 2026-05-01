@@ -41,30 +41,33 @@
         <p class="text-secondary mb-5">Herramientas para conectar con el trabajo que importa</p>
         
         <div class="row text-start g-4">
+            {{-- Producto 1 --}}
             <div class="col-md-4">
-                <div class="card card-fondo-img text-white border-0 rounded-4" style="background-image: url('{{ asset('img/cap1.jpg') }}');">
-                    <div class="card-overlay"></div>
-                    <div class="p-4 w-100">
+                <div id="prod-1" class="card card-fondo-img clase-producto text-white border-0 rounded-4" style="background-image: url('{{ asset('img/cap1.jpg') }}'); min-height: 200px; position: relative; overflow: hidden;">
+                    <div class="card-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4);"></div>
+                    <div class="p-4 w-100" style="position: relative; z-index: 2;">
                         <h3 class="h4 fw-bold">Búsqueda inteligente de organizaciones</h3>
                         <p class="small text-light">Localiza ONGs por nombre, misión o área de trabajo</p>
                         <a href="#" class="text-white text-decoration-none fw-bold">Descubrir ></a>
                     </div>
                 </div>
             </div>
+            {{-- Producto 2 --}}
             <div class="col-md-4">
-                <div class="card card-fondo-img text-white border-0 rounded-4" style="background-image: url('{{ asset('img/cap2.jpg') }}');">
-                    <div class="card-overlay"></div>
-                    <div class="p-4 w-100">
+                <div id="prod-2" class="card card-fondo-img clase-producto text-white border-0 rounded-4" style="background-image: url('{{ asset('img/cap2.jpg') }}'); min-height: 200px; position: relative; overflow: hidden;">
+                    <div class="card-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4);"></div>
+                    <div class="p-4 w-100" style="position: relative; z-index: 2;">
                         <h3 class="h4 fw-bold">Filtros por ubicación y especialidad</h3>
                         <p class="small text-light">Refina resultados según tu región y causa preferida</p>
                         <a href="#" class="text-white text-decoration-none fw-bold">Explorar ></a>
                     </div>
                 </div>
             </div>
+            {{-- Producto 3 --}}
             <div class="col-md-4">
-                <div class="card card-fondo-img text-white border-0 rounded-4" style="background-image: url('{{ asset('img/cap3.jpg') }}');">
-                    <div class="card-overlay"></div>
-                    <div class="p-4 w-100">
+                <div id="prod-3" class="card card-fondo-img clase-producto text-white border-0 rounded-4" style="background-image: url('{{ asset('img/cap3.jpg') }}'); min-height: 200px; position: relative; overflow: hidden;">
+                    <div class="card-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4);"></div>
+                    <div class="p-4 w-100" style="position: relative; z-index: 2;">
                         <h3 class="h4 fw-bold">Información de contacto verificada</h3>
                         <p class="small text-light">Comunicate directamente con las organizaciones</p>
                         <a href="#" class="text-white text-decoration-none fw-bold">Conectar ></a>
@@ -137,8 +140,50 @@
             <div class="mt-5 pt-4">
                 <h2 class="h3 fw-bold mb-2">¿Necesitas más ayuda?</h2>
                 <p class="text-secondary mb-4">Nuestro equipo está disponible para resolver tus consultas.</p>
-                <button class="btn btn-light border px-4 py-2 fw-bold bg-white">Contactar</button>
+                {{-- Mantenemos tu botón de contactar con la clase y el ID correctos --}}
+                <button id="btn-contactar" class="btn btn-light border px-4 py-2 fw-bold bg-white clase-producto">Contactar</button>
             </div>
         </section>
     </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Capturamos por ClassName
+    const elementos = document.getElementsByClassName('clase-producto');
+
+    // 2. Funciones explícitas para cumplir la actividad
+    function resaltar() {
+        // Enlace mediante ById
+        const el = document.getElementById(this.id);
+        
+        el.style.transform = "scale(1.05)";
+        el.style.transition = "all 0.3s ease";
+        el.classList.add('shadow-lg', 'border-primary');
+
+        // Lógica para oscurecer el botón de contactar
+        if(this.id === 'btn-contactar') {
+            el.style.backgroundColor = "#cbd5e1"; // Gris más oscuro
+        }
+    }
+
+    function restaurar() {
+        const el = document.getElementById(this.id);
+        
+        el.style.transform = "scale(1)";
+        el.classList.remove('shadow-lg', 'border-primary');
+
+        // Restaurar color del botón
+        if(this.id === 'btn-contactar') {
+            el.style.backgroundColor = "#ffffff";
+        }
+    }
+
+    // 3. Agregar eventos addEventListener
+    for (let i = 0; i < elementos.length; i++) {
+        elementos[i].addEventListener("mouseover", resaltar);
+        elementos[i].addEventListener("mouseout", restaurar);
+    }
+});
+</script>
+
 @endsection

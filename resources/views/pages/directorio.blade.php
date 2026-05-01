@@ -90,7 +90,7 @@
         <main class="col-12 col-md-9">
             <div class="row g-4" id="contenedor-ongs">
 
-                <article class="articulo tema-tecnologia alcance-local apoyo-donaciones nombre-renuevatech col-12 col-md-6 col-lg-4">
+                <article id="ong-1" class="articulo clase-producto tema-tecnologia alcance-local apoyo-donaciones nombre-renuevatech col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-primary mb-2">Tecnología</span> <span class="badge bg-secondary mb-2">Local</span>
@@ -101,7 +101,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-ecologia alcance-regional apoyo-voluntariado nombre-bosqueslibres col-12 col-md-6 col-lg-4">
+                <article id="ong-2" class="articulo clase-producto tema-ecologia alcance-regional apoyo-voluntariado nombre-bosqueslibres col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-success mb-2">Ecología</span> <span class="badge bg-secondary mb-2">Regional</span>
@@ -112,7 +112,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-educacion alcance-nacional apoyo-capacitacion nombre-codigoabierto col-12 col-md-6 col-lg-4">
+                <article id="ong-3" class="articulo clase-producto tema-educacion alcance-nacional apoyo-capacitacion nombre-codigoabierto col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-warning text-dark mb-2">Educación</span> <span class="badge bg-secondary mb-2">Nacional</span>
@@ -123,7 +123,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-educacion alcance-local apoyo-voluntariado nombre-lecturaparatodos col-12 col-md-6 col-lg-4">
+                <article id="ong-4" class="articulo clase-producto tema-educacion alcance-local apoyo-voluntariado nombre-lecturaparatodos col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-warning text-dark mb-2">Educación</span> <span class="badge bg-secondary mb-2">Local</span>
@@ -134,7 +134,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-ecologia alcance-nacional apoyo-donaciones nombre-salvemoseioceano col-12 col-md-6 col-lg-4">
+                <article id="ong-5" class="articulo clase-producto tema-ecologia alcance-nacional apoyo-donaciones nombre-salvemoseioceano col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-success mb-2">Ecología</span> <span class="badge bg-secondary mb-2">Nacional</span>
@@ -145,7 +145,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-tecnologia alcance-regional apoyo-capacitacion nombre-mujeresentech col-12 col-md-6 col-lg-4">
+                <article id="ong-6" class="articulo clase-producto tema-tecnologia alcance-regional apoyo-capacitacion nombre-mujeresentech col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-primary mb-2">Tecnología</span> <span class="badge bg-secondary mb-2">Regional</span>
@@ -156,7 +156,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-ecologia tema-tecnologia alcance-local apoyo-voluntariado nombre-reciclajeinteligente col-12 col-md-6 col-lg-4">
+                <article id="ong-7" class="articulo clase-producto tema-ecologia tema-tecnologia alcance-local apoyo-voluntariado nombre-reciclajeinteligente col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-dark mb-2">EcoTech</span> <span class="badge bg-secondary mb-2">Local</span>
@@ -167,7 +167,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-educacion alcance-regional apoyo-donaciones nombre-mochilasllenas col-12 col-md-6 col-lg-4">
+                <article id="ong-8" class="articulo clase-producto tema-educacion alcance-regional apoyo-donaciones nombre-mochilasllenas col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-warning text-dark mb-2">Educación</span> <span class="badge bg-secondary mb-2">Regional</span>
@@ -178,7 +178,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-tecnologia alcance-nacional apoyo-voluntariado nombre-internetdigno col-12 col-md-6 col-lg-4">
+                <article id="ong-9" class="articulo clase-producto tema-tecnologia alcance-nacional apoyo-voluntariado nombre-internetdigno col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-primary mb-2">Tecnología</span> <span class="badge bg-secondary mb-2">Nacional</span>
@@ -189,7 +189,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-educacion alcance-local apoyo-capacitacion nombre-aulascomunitarias col-12 col-md-6 col-lg-4">
+                <article id="ong-10" class="articulo clase-producto tema-educacion alcance-local apoyo-capacitacion nombre-aulascomunitarias col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-warning text-dark mb-2">Educación</span> <span class="badge bg-secondary mb-2">Local</span>
@@ -200,7 +200,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-ecologia alcance-regional apoyo-donaciones nombre-rescateanimal col-12 col-md-6 col-lg-4">
+                <article id="ong-11" class="articulo clase-producto tema-ecologia alcance-regional apoyo-donaciones nombre-rescateanimal col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-success mb-2">Ecología</span> <span class="badge bg-secondary mb-2">Regional</span>
@@ -211,7 +211,7 @@
                     </div>
                 </article>
 
-                <article class="articulo tema-tecnologia alcance-nacional apoyo-donaciones nombre-programacionkids col-12 col-md-6 col-lg-4">
+                <article id="ong-12" class="articulo clase-producto tema-tecnologia alcance-nacional apoyo-donaciones nombre-programacionkids col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body">
                             <span class="badge bg-primary mb-2">Tecnología</span> <span class="badge bg-secondary mb-2">Nacional</span>
@@ -227,35 +227,53 @@
     </div>
 </div>
 
+{{-- BLOQUE DE SCRIPTS UNIFICADO (FILTROS + RESALTE) --}}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    // 1. INICIALIZAR FILTROS (Mantenemos tu lógica original)
     vincularFiltros();
+
+    // 2. LOGICA DE RESALTE (Actividad JS)
+    const productos = document.getElementsByClassName('clase-producto');
+
+    function resaltar() {
+        const el = document.getElementById(this.id);
+        el.style.transform = "scale(1.05)";
+        el.style.transition = "all 0.3s ease";
+        el.style.zIndex = "50";
+        el.classList.add('shadow-lg', 'border', 'border-primary');
+    }
+
+    function restaurar() {
+        const el = document.getElementById(this.id);
+        el.style.transform = "scale(1)";
+        el.style.zIndex = "1";
+        el.classList.remove('shadow-lg', 'border', 'border-primary');
+    }
+
+    for (let i = 0; i < productos.length; i++) {
+        productos[i].addEventListener("mouseover", resaltar);
+        productos[i].addEventListener("mouseout", restaurar);
+    }
 });
 
+// --- TUS FUNCIONES DE FILTROS ORIGINALES ---
 function vincularFiltros() {
-    // EVENTO DEL BUSCADOR DE TEXTO
     document.getElementById('buscador-nombre').addEventListener('keyup', procesarLogicaFiltros);
-
-    // CATEGORÍA 1: TEMÁTICA
     document.getElementById('tema-educacion').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('tema-ecologia').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('tema-tecnologia').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('tema-todos').addEventListener('change', reiniciarTematica);
-
-    // CATEGORÍA 2: ALCANCE
     document.getElementById('alcance-local').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('alcance-regional').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('alcance-nacional').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('alcance-todos').addEventListener('change', reiniciarAlcance);
-
-    // CATEGORÍA 3: APOYO
     document.getElementById('apoyo-donaciones').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('apoyo-voluntariado').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('apoyo-capacitacion').addEventListener('change', procesarLogicaFiltros);
     document.getElementById('apoyo-todos').addEventListener('change', reiniciarApoyo);
 }
 
-// Funciones explícitas para reiniciar los checks de "Mostrar Todos"
 function reiniciarTematica() {
     document.getElementById('tema-educacion').checked = false;
     document.getElementById('tema-ecologia').checked = false;
@@ -276,70 +294,38 @@ function reiniciarApoyo() {
 }
 
 function procesarLogicaFiltros() {
-    // 1. Obtener y limpiar el texto del buscador
     var textoBuscado = document.getElementById('buscador-nombre').value.toLowerCase().split(' ').join('');
-
-    // 2. Obtener estado de los checkboxes
     var chkEdu = document.getElementById('tema-educacion').checked;
     var chkEco = document.getElementById('tema-ecologia').checked;
     var chkTech = document.getElementById('tema-tecnologia').checked;
-
     var chkLocal = document.getElementById('alcance-local').checked;
     var chkRegional = document.getElementById('alcance-regional').checked;
     var chkNacional = document.getElementById('alcance-nacional').checked;
-
     var chkDonacion = document.getElementById('apoyo-donaciones').checked;
     var chkVoluntariado = document.getElementById('apoyo-voluntariado').checked;
     var chkCapacitacion = document.getElementById('apoyo-capacitacion').checked;
 
-    // Verificar si hay filtros activos por bloque
     var hayFiltroTema = chkEdu || chkEco || chkTech;
     var hayFiltroAlcance = chkLocal || chkRegional || chkNacional;
     var hayFiltroApoyo = chkDonacion || chkVoluntariado || chkCapacitacion;
 
-    // Actualizar casillas visuales de "Todos"
     document.getElementById('tema-todos').checked = !hayFiltroTema;
     document.getElementById('alcance-todos').checked = !hayFiltroAlcance;
     document.getElementById('apoyo-todos').checked = !hayFiltroApoyo;
 
-    // 3. Capturar divisiones por ClassName
     var articulos = document.getElementsByClassName('articulo');
 
-    // 4. Bucle principal para evaluar condiciones
     for (var i = 0; i < articulos.length; i++) {
         var articulo = articulos[i];
         var clases = articulo.className;
-
-        // Ocultar por defecto usando display
         articulo.style.display = 'none'; 
 
-        // Evaluaciones de Inclusión (dentro de la misma categoría)
-        var cumpleTema = (!hayFiltroTema) || 
-                         (chkEdu && clases.includes('tema-educacion')) || 
-                         (chkEco && clases.includes('tema-ecologia')) || 
-                         (chkTech && clases.includes('tema-tecnologia'));
+        var cumpleTema = (!hayFiltroTema) || (chkEdu && clases.includes('tema-educacion')) || (chkEco && clases.includes('tema-ecologia')) || (chkTech && clases.includes('tema-tecnologia'));
+        var cumpleAlcance = (!hayFiltroAlcance) || (chkLocal && clases.includes('alcance-local')) || (chkRegional && clases.includes('alcance-regional')) || (chkNacional && clases.includes('alcance-nacional'));
+        var cumpleApoyo = (!hayFiltroApoyo) || (chkDonacion && clases.includes('apoyo-donaciones')) || (chkVoluntariado && clases.includes('apoyo-voluntariado')) || (chkCapacitacion && clases.includes('apoyo-capacitacion'));
 
-        var cumpleAlcance = (!hayFiltroAlcance) || 
-                            (chkLocal && clases.includes('alcance-local')) || 
-                            (chkRegional && clases.includes('alcance-regional')) || 
-                            (chkNacional && clases.includes('alcance-nacional'));
+        var pasaBusqueda = (textoBuscado === "") || clases.includes(textoBuscado);
 
-        var cumpleApoyo = (!hayFiltroApoyo) || 
-                          (chkDonacion && clases.includes('apoyo-donaciones')) || 
-                          (chkVoluntariado && clases.includes('apoyo-voluntariado')) || 
-                          (chkCapacitacion && clases.includes('apoyo-capacitacion'));
-
-        // Evaluación del Buscador por clase
-        var pasaBusqueda = true;
-        if (textoBuscado !== "") {
-            if (clases.includes(textoBuscado)) {
-                pasaBusqueda = true;
-            } else {
-                pasaBusqueda = false;
-            }
-        }
-
-        // Mostrar solo si cumple las categorías Y la búsqueda (Exclusión)
         if (cumpleTema && cumpleAlcance && cumpleApoyo && pasaBusqueda) {
             articulo.style.display = 'block'; 
         }
