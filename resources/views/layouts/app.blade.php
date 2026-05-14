@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directorio de ONGs</title>
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     @vite([
         'resources/css/app.css', 
         'resources/css/estructural.css', 
@@ -12,84 +14,82 @@
     ])
 </head>
 
-<body class="flex flex-col min-h-screen text-gray-800 font-sans">
+<body class="d-flex flex-column min-vh-100 text-dark bg-light">
 
-    <header class="bg-blue-900 text-white p-4 shadow-md">
-        <div class="container mx-auto flex items-center justify-between px-6">
+    <header class="bg-primary text-white p-3 shadow-sm">
+        <div class="container-fluid d-flex align-items-center justify-content-between px-md-5">
             
             <div>
                 <a href="{{ route('inicio') }}">
-                    <img src="{{ asset('img/logo.png') }}" alt="Logo Directorio ONGs" class="h-12">
+                    <img src="{{ asset('img/logo.png') }}" alt="Logo Directorio ONGs" style="height: 45px;">
                 </a>
             </div>
 
-            <nav class="hidden md:block">
-                <ul class="flex space-x-6 font-semibold">
-                    <li><a href="{{ route('sobre-nosotros') }}" class="hover:text-blue-300 transition">Sobre nosotros</a></li>
-                    <li><a href="{{ route('directorio') }}" class="hover:text-blue-300 transition">Directorio de ONGs</a></li>
-                    <li><a href="{{ route('areas-trabajo') }}" class="hover:text-blue-300 transition">Áreas de trabajo</a></li>
-                    <li><a href="{{ route('faq') }}" class="hover:text-blue-300 transition">Preguntas Frecuentes</a></li>
+            <nav class="d-none d-md-block mx-auto">
+                <ul class="d-flex list-unstyled mb-0 gap-4 fw-semibold">
+                    <li><a href="{{ route('sobre-nosotros') }}" class="text-white text-decoration-none">Sobre nosotros</a></li>
+                    <li><a href="{{ route('directorio') }}" class="text-white text-decoration-none">Directorio de ONGs</a></li>
+                    <li><a href="{{ route('areas-trabajo') }}" class="text-white text-decoration-none">Áreas de trabajo</a></li>
+                    <li><a href="{{ route('faq') }}" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
                 </ul>
             </nav>
 
-            <div class="relative inline-block text-left" id="dropdown-menu-container">
-                <button type="button" id="dropdown-button" class="inline-flex justify-center w-full rounded-md border border-white px-4 py-2 bg-blue-800 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none transition">
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle px-3 fw-bold" type="button" data-bs-toggle="dropdown">
                     Más
                 </button>
-
-                <div id="dropdown-content" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden z-50">
-                    <div class="py-1" role="menu">
-                        <a href="{{ route('contacto') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contacto</a>
-                        <a href="{{ route('participa') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Participa</a>
-                        <a href="{{ route('noticias') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Noticias</a>
-                        <a href="{{ route('politica-privacidad') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Política de privacidad</a>
-                    </div>
-                </div>
+                <ul class="dropdown-menu dropdown-menu-end shadow">
+                    <li><a class="dropdown-item" href="{{ route('contacto') }}">Contacto</a></li>
+                    <li><a class="dropdown-item" href="{{ route('participa') }}">Participa</a></li>
+                    <li><a class="dropdown-item" href="{{ route('noticias') }}">Noticias</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{{ route('politica-privacidad') }}">Política de privacidad</a></li>
+                </ul>
             </div>
 
         </div>
     </header>
 
-    <main class="flex-grow bg-gray-50">
+    <main class="flex-grow-1 py-4">
         @yield('content')
     </main>
 
-    <footer class="bg-blue-900 text-white pt-10 pb-6 w-full">
-        <div class="container mx-auto px-6">
+    <footer class="bg-primary text-white pt-5 pb-3 mt-auto">
+        <div class="container-fluid px-md-5">
 
-            <div class="flex flex-wrap mb-8">
-                <div class="w-full md:w-2/3 flex flex-col gap-4 mb-6 md:mb-0">
+            <div class="row mb-4">
+                <div class="col-md-8 d-flex flex-column gap-3">
                     <div>
-                        <img src="{{ asset('img/logo.png') }}" alt="Logo Directorio ONGs" class="h-14">
+                        <img src="{{ asset('img/logo.png') }}" alt="Logo Directorio ONGs" style="height: 55px;">
                     </div>
-                    <ul class="flex flex-wrap gap-6 mt-4 font-medium">
-                        <li><a href="{{ route('sobre-nosotros') }}" class="hover:text-blue-300 transition">Sobre Nosotros</a></li>
-                        <li><a href="{{ route('directorio') }}" class="hover:text-blue-300 transition">Directorio</a></li>
-                        <li><a href="{{ route('noticias') }}" class="hover:text-blue-300 transition">Noticias</a></li>
-                        <li><a href="{{ route('participa') }}" class="hover:text-blue-300 transition">Participa</a></li>
-                        <li><a href="{{ route('contacto') }}" class="hover:text-blue-300 transition">Contacto</a></li>
+                    <ul class="d-flex list-unstyled gap-4 flex-wrap mt-2 fw-medium">
+                        <li><a href="{{ route('sobre-nosotros') }}" class="text-white text-decoration-none">Sobre Nosotros</a></li>
+                        <li><a href="{{ route('directorio') }}" class="text-white text-decoration-none">Directorio</a></li>
+                        <li><a href="{{ route('noticias') }}" class="text-white text-decoration-none">Noticias</a></li>
+                        <li><a href="{{ route('participa') }}" class="text-white text-decoration-none">Participa</a></li>
+                        <li><a href="{{ route('contacto') }}" class="text-white text-decoration-none">Contacto</a></li>
                     </ul>
                 </div>
 
-                <div class="w-full md:w-1/3">
-                    <h4 class="text-lg font-bold mb-3">Quejas o sugerencias</h4>
-                    <div class="flex gap-2">
-                        <input type="text" class="w-full px-3 py-2 rounded text-gray-800 focus:outline-none" placeholder="Tu mensaje aquí">
-                        <button class="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded text-white font-medium transition">Enviar</button>
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold">Quejas o sugerencias</h4>
+                    <div class="d-flex gap-2 mt-2">
+                        <input type="text" class="form-control" placeholder="Tu mensaje aquí">
+                        <button class="btn btn-dark">Enviar</button>
                     </div>
-                    <small class="text-blue-200 mt-2 block">
+                    <small class="text-light mt-2 d-block opacity-75">
                         Al suscribirse aceptas nuestra política de privacidad
                     </small>
                 </div>
             </div>
 
-            <div class="flex flex-wrap justify-between items-center border-t border-blue-700 pt-6 mt-4 text-sm text-blue-300">
-                <div class="flex gap-6 mb-4 md:mb-0">
-                    <a href="{{ route('politica-privacidad') }}" class="hover:text-white transition">Política Privada</a>
-                    <a href="{{ route('terminos-servicio') }}" class="hover:text-white transition">Términos de Servicio</a>
-                    <a href="{{ route('configuracion-cookies') }}" class="hover:text-white transition">Configuración Cookies</a>
+            <div class="row border-top border-light pt-3 opacity-75">
+                <div class="col-md-6 d-flex gap-4">
+                    <a href="{{ route('politica-privacidad') }}" class="text-white text-decoration-none small">Política Privada</a>
+                    <a href="{{ route('terminos-servicio') }}" class="text-white text-decoration-none small">Términos de Servicio</a>
+                    <a href="{{ route('configuracion-cookies') }}" class="text-white text-decoration-none small">Configuración Cookies</a>
                 </div>
-                <div>
+                <div class="col-md-6 text-md-end small text-white mt-3 mt-md-0">
                     2025 Directorio de ONGs. Todos derechos reservados.
                 </div>
             </div>
@@ -97,24 +97,7 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const button = document.getElementById('dropdown-button');
-            const menu = document.getElementById('dropdown-content');
-
-            button.addEventListener('click', function(event) {
-                event.stopPropagation();
-                menu.classList.toggle('hidden');
-            });
-
-            // Cierra el menú si haces clic en cualquier otra parte
-            document.addEventListener('click', function() {
-                if (!menu.classList.contains('hidden')) {
-                    menu.classList.add('hidden');
-                }
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
