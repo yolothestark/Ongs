@@ -45,3 +45,32 @@ body {
 a.text-info {
     color: #2D74DA !important; /* Tu azul brillante del mockup */
 }
+
+/* =========================================
+   SOBRESCRIBIR EL AZUL CHILLÓN DE BOOTSTRAP
+   ========================================= */
+
+/* 1. Cambiar el fondo (Para el Header y Footer) */
+.bg-primary {
+    background-color: #0a2540 !important; /* Tu Azul Marino */
+}
+
+/* 2. Cambiar el color del texto (Para el título de Preguntas Frecuentes) */
+.text-primary {
+    color: #0a2540 !important;
+}
+
+/* 3. Cambiar los bordes (Para las tarjetas del acordeón) */
+.border-primary {
+    border-color: #0a2540 !important;
+}
+
+/* 4. Cambiar botones primarios (Si tienes alguno) */
+.btn-primary {
+    background-color: #0a2540 !important;
+    border-color: #0a2540 !important;
+}
+.btn-primary:hover {
+    background-color: #06192e !important; /* Un poco más oscuro al pasar el ratón */
+    border-color: #06192e !important;
+}
