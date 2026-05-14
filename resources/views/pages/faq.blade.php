@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('content')
     <div class="max-w-3xl mx-auto mt-10 font-sans p-4">
         <h2 class="text-3xl font-bold mb-8 text-center text-blue-900 border-b-4 border-blue-700 pb-3">

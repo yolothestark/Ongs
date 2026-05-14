@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap');
 
-/* TRUCO: Sobrescribimos los colores oficiales de Bootstrap para cumplir la rúbrica pero mantener el Mockup */
-:root {
-    --bs-primary-rgb: 10, 37, 64; /* bg-primary ahora es el Azul Navy */
-    --bs-secondary-rgb: 179, 212, 179; /* bg-secondary ahora es el Verde Claro */
-    --bs-info-rgb: 45, 116, 218; /* btn-info ahora es tu Azul Brillante de botones */
-    --bs-font-sans-serif: 'Inter', sans-serif;
+/* TRUCO: Mayor especificidad para forzar que tus colores ganen en Producción */
+:root, body, html {
+    --bs-primary-rgb: 10, 37, 64 !important; /* bg-primary ahora es el Azul Navy */
+    --bs-secondary-rgb: 179, 212, 179 !important; /* bg-secondary ahora es el Verde Claro */
+    --bs-info-rgb: 45, 116, 218 !important; /* btn-info ahora es tu Azul Brillante de botones */
+    --bs-font-sans-serif: 'Inter', sans-serif !important;
 }
 
 body {
@@ -27,11 +27,13 @@ body {
     flex-direction: column;
     justify-content: flex-end;
 }
+
 .card-overlay {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8));
     z-index: 1;
 }
+
 .card-fondo-img > div { position: relative; z-index: 2; }
 
 /* Corrección: Forzar que los textos secundarios sean gris oscuro y legibles, ignorando el verde del fondo */
