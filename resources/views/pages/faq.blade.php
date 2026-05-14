@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@vite(['resources/js/faq.js'])
 
 @section('content')
     <div class="max-w-3xl mx-auto mt-10 font-sans p-4">
