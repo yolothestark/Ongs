@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directorio de ONGs</title>
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @vite(['resources/css/estructural.css'])
+    
+    @vite([
+        'resources/css/app.css', 
+        'resources/css/estructural.css', 
+        'resources/js/app.js',
+        'resources/js/faq.js'
+    ])
 </head>
 
-<!-- 🔥 CAMBIO IMPORTANTE -->
 <body class="d-flex flex-column min-vh-100 text-dark">
 
-    <!-- HEADER -->
     <header class="bg-primary text-white p-3 shadow">
         <div class="container-fluid d-flex align-items-center px-5">
             
-            <!-- Logo -->
             <div>
                 <a href="{{ route('inicio') }}">
                     <img src="{{ asset('img/logo.png') }}" alt="Logo Directorio ONGs" style="height: 45px;">
                 </a>
             </div>
 
-            <!-- Menú centrado -->
             <nav class="mx-auto">
                 <ul class="d-flex list-unstyled mb-0 gap-4 fw-semibold">
                     <li><a href="{{ route('sobre-nosotros') }}" class="text-white text-decoration-none">Sobre nosotros</a></li>
@@ -35,7 +35,6 @@
                 </ul>
             </nav>
 
-            <!-- Botón Más -->
             <div class="dropdown">
                 <button class="btn btn-outline-light dropdown-toggle px-3" 
                         type="button" 
@@ -54,12 +53,10 @@
         </div>
     </header>
 
-    <!-- 🔥 CAMBIO IMPORTANTE -->
     <main class="flex-grow-1">
         @yield('content')
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-primary text-white pt-5 pb-3 w-100">
         <div class="container-fluid px-5">
 
@@ -106,7 +103,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
