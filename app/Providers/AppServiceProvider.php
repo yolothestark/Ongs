@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\URL; // <-- 1. Importamos la clase URL
+use Illuminate\Support\Facades\URL; // <-- 1. IMPORTANTE AÑADIR ESTO
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,9 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // 2. Le decimos a Laravel que si está en el servidor de producción (Render),
-        // obligue a que todos los CSS, JS y enlaces usen HTTPS.
-        if (env('APP_ENV') === 'production') {
+        // 2. FORZAR HTTPS EN PRODUCCIÓN
+        if (env('APP_ENV') !== 'local') {
             URL::forceScheme('https');
         }
     }
