@@ -16,7 +16,7 @@
 
 <body class="d-flex flex-column min-vh-100 text-dark bg-light">
 
-    <header class="bg-dark text-white p-3 shadow-sm">
+    <header class="bg-primary text-white p-3 shadow-sm">
         <div class="container-fluid d-flex align-items-center justify-content-between px-md-5">
             
             <div>
