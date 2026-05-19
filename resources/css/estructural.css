@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap');
 
-/* TRUCO: Mayor especificidad para forzar que tus colores ganen en Producción */
+/* Definición de la tipografía principal */
 :root, body, html {
-    --bs-primary-rgb: 10, 37, 64 !important; /* bg-primary ahora es el Azul Navy */
-    --bs-secondary-rgb: 179, 212, 179 !important; /* bg-secondary ahora es el Verde Claro */
-    --bs-info-rgb: 45, 116, 218 !important; /* btn-info ahora es tu Azul Brillante de botones */
     --bs-font-sans-serif: 'Inter', sans-serif !important;
 }
 
@@ -36,7 +33,7 @@ body {
 
 .card-fondo-img > div { position: relative; z-index: 2; }
 
-/* Corrección: Forzar que los textos secundarios sean gris oscuro y legibles, ignorando el verde del fondo */
+/* Corrección: Forzar que los textos secundarios sean gris oscuro y legibles */
 .text-secondary {
     color: #4b5563 !important; /* Gris oscuro / Pizarra */
 }
@@ -44,33 +41,4 @@ body {
 /* Y para asegurar que los enlaces no se pierdan */
 a.text-info {
     color: #2D74DA !important; /* Tu azul brillante del mockup */
-}
-
-/* =========================================
-   SOBRESCRIBIR EL AZUL CHILLÓN DE BOOTSTRAP
-   ========================================= */
-
-/* 1. Cambiar el fondo (Para el Header y Footer) */
-.bg-primary {
-    background-color: #0a2540 !important; /* Tu Azul Marino */
-}
-
-/* 2. Cambiar el color del texto (Para el título de Preguntas Frecuentes) */
-.text-primary {
-    color: #0a2540 !important;
-}
-
-/* 3. Cambiar los bordes (Para las tarjetas del acordeón) */
-.border-primary {
-    border-color: #0a2540 !important;
-}
-
-/* 4. Cambiar botones primarios (Si tienes alguno) */
-.btn-primary {
-    background-color: #0a2540 !important;
-    border-color: #0a2540 !important;
-}
-.btn-primary:hover {
-    background-color: #06192e !important; /* Un poco más oscuro al pasar el ratón */
-    border-color: #06192e !important;
 }
