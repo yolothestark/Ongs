@@ -7,8 +7,8 @@
                 <h1 class="display-4 fw-bold mb-4">Encuentra las organizaciones que transforman tu comunidad</h1>
                 <p class="lead text-secondary mb-4">Conecta con miles de ONGs trabajando en causas que importan. Descubre misiones, ubicaciones y formas de apoyar el cambio social desde tu región.</p>
                 <div class="d-flex gap-3">
-                    <button class="btn btn-info text-white px-4 py-2 fw-bold">Explorar</button>
-                    <button class="btn btn-light border px-4 py-2 fw-bold">Aprender</button>
+                    <a href="{{ route('directorio') }}" class="btn btn-primary px-4 py-2 fw-bold">Explorar</a>
+                    <a href="{{ route('areas-trabajo') }}" class="btn btn-light border px-4 py-2 fw-bold">Aprender</a>
                 </div>
             </article>
             <aside class="col-md-6 mt-4 mt-md-0">
@@ -27,8 +27,8 @@
                 <div class="col-md-7">
                     <p class="fs-5 mb-4 text-secondary">Acceso directo a información verificada sobre organizaciones no gubernamentales. Conoce sus trabajos, ubicación y cómo conectar con ellas.</p>
                     <div class="d-flex gap-3">
-                        <button class="btn btn-info text-white px-4 py-2 fw-bold">Buscar</button>
-                        <button class="btn btn-outline-dark px-4 py-2 fw-bold">Saber más</button>
+                        <a href="{{ route('directorio') }}" class="btn btn-info text-white px-4 py-2 fw-bold">Buscar</a>
+                        <a href="{{ route('sobre-nosotros') }}" class="btn btn-outline-dark px-4 py-2 fw-bold">Saber más</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                     <div class="p-4 w-100" style="position: relative; z-index: 2;">
                         <h3 class="h4 fw-bold">Búsqueda inteligente de organizaciones</h3>
                         <p class="small text-light">Localiza ONGs por nombre, misión o área de trabajo</p>
-                        <a href="#" class="text-white text-decoration-none fw-bold">Descubrir ></a>
+                        <a href="{{ route('directorio') }}" class="text-white text-decoration-none fw-bold">Descubrir ></a>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <div class="p-4 w-100" style="position: relative; z-index: 2;">
                         <h3 class="h4 fw-bold">Filtros por ubicación y especialidad</h3>
                         <p class="small text-light">Refina resultados según tu región y causa preferida</p>
-                        <a href="#" class="text-white text-decoration-none fw-bold">Explorar ></a>
+                        <a href="{{ route('directorio') }}" class="text-white text-decoration-none fw-bold">Explorar ></a>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     <div class="p-4 w-100" style="position: relative; z-index: 2;">
                         <h3 class="h4 fw-bold">Información de contacto verificada</h3>
                         <p class="small text-light">Comunicate directamente con las organizaciones</p>
-                        <a href="#" class="text-white text-decoration-none fw-bold">Conectar ></a>
+                        <a href="{{ route('contacto') }}" class="text-white text-decoration-none fw-bold">Conectar ></a>
                     </div>
                 </div>
             </div>
@@ -91,8 +91,8 @@
                         <h3 class="h4 fw-bold mt-2 mb-3">Acceso transparente a organizaciones verificadas</h3>
                         <p class="text-secondary mb-4">Encuentra exactamente dónde y cómo contribuir a causas que te importan verdaderamente</p>
                         <div class="d-flex gap-3 align-items-center">
-                            <button class="btn btn-light border px-4 py-2 fw-bold">Unirse</button>
-                            <a href="#" class="text-dark fw-bold text-decoration-none">Leer ></a>
+                            <a href="{{ route('participa') }}" class="btn btn-light border px-4 py-2 fw-bold">Unirse</a>
+                            <a href="{{ route('sobre-nosotros') }}" class="text-dark fw-bold text-decoration-none">Leer ></a>
                         </div>
                     </div>
                 </div>
@@ -106,8 +106,8 @@
                         <h3 class="h4 fw-bold mt-2 mb-3">Visibilidad para tu trabajo social</h3>
                         <p class="text-secondary mb-4">Expande tu alcance y conecta con personas dispuestas a apoyar tu misión en la comunidad</p>
                         <div class="d-flex gap-3 align-items-center">
-                            <button class="btn btn-light border px-4 py-2 fw-bold">Registrar</button>
-                            <a href="#" class="text-dark fw-bold text-decoration-none">Saber ></a>
+                            <a href="{{ route('participa') }}" class="btn btn-light border px-4 py-2 fw-bold">Registrar</a>
+                            <a href="{{ route('sobre-nosotros') }}" class="text-dark fw-bold text-decoration-none">Saber ></a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                 <h2 class="h3 fw-bold mb-2">¿Necesitas más ayuda?</h2>
                 <p class="text-secondary mb-4">Nuestro equipo está disponible para resolver tus consultas.</p>
                 {{-- Mantenemos tu botón de contactar con la clase y el ID correctos --}}
-                <button id="btn-contactar" class="btn btn-light border px-4 py-2 fw-bold bg-white clase-producto">Contactar</button>
+                <a href="{{ route('contacto') }}" id="btn-contactar" class="btn btn-light border px-4 py-2 fw-bold bg-white clase-producto text-decoration-none d-inline-block">Contactar</a>
             </div>
         </section>
     </div>
