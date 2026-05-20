@@ -20,9 +20,7 @@ Route::get('/directorio', function () {
     return view('pages.directorio');
 })->name('directorio');
 
-Route::get('/areas-trabajo', function () {
-    return view('pages.areas-trabajo');
-})->name('areas-trabajo');
+Route::get('/areas-trabajo', [OngController::class, 'areas'])->name('areas-trabajo');
 
 Route::get('/noticias', function () {
     return view('pages.noticias');

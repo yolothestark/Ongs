@@ -119,4 +119,11 @@ class OngController extends Controller
         $ong = $ongs[$id];
         return view('pages.perfil-ong', compact('ong'));
     }
+
+    // Método para la vista de Áreas de Trabajo
+    public function areas()
+    {
+        $ongs = $this->getOngs();
+        return view('pages.areas-trabajo', compact('ongs'));
+    }
 }
