@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container py-5 mt-4">
-    <a href="{{ route('directorio') }}" class="btn btn-outline-dark mb-4 fw-bold">
+    <a href="{{ route('directorio') }}" class="btn btn-outline-dark mb-5 fw-bold">
         <i class="bi bi-arrow-left"></i> Volver al directorio
     </a>
 
     <div class="row g-5">
         <div class="col-lg-8">
-            <div class="d-flex gap-2 mb-3">
+            <div class="d-flex gap-2 mb-4">
                 <span class="badge {{ $ong['categoria'] == 'Tecnología' ? 'bg-dark' : ($ong['categoria'] == 'Ecología' ? 'bg-success' : 'bg-warning text-dark') }}">
                     {{ $ong['categoria'] }}
                 </span>
@@ -20,8 +20,8 @@
                 </span>
             </div>
             
-            <h1 class="display-5 fw-bold mb-3">{{ $ong['nombre'] }}</h1>
-            <h2 class="h4 text-secondary mb-5">{{ $ong['descripcion_corta'] }}</h2>
+            <h1 class="display-4 fw-bold mb-3">{{ $ong['nombre'] }}</h1>
+            <h2 class="h4 text-secondary mb-5 pb-3 border-bottom">{{ $ong['descripcion_corta'] }}</h2>
             
             <h3 class="h4 fw-bold mb-3">Nuestra Labor</h3>
             <p class="fs-5 text-secondary lh-lg mb-5">

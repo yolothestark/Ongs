@@ -39,7 +39,6 @@
     <hr class="my-5 opacity-25">
 
     <div id="seccion-resultados" class="d-none">
-        
         <div class="mb-4">
             <h3 id="titulo-area" class="display-6 fw-bold text-primary mb-2">Título</h3>
             <p id="descripcion-area" class="text-secondary fs-5">Descripción detallada de lo que hace esta área...</p>
@@ -48,9 +47,9 @@
         <div class="row g-4" id="contenedor-ongs-areas">
             @foreach($ongs as $ong)
                 <div class="col-md-4 tarjeta-ong cat-{{ $ong['categoria'] }} cat-EcoTech" style="display: none;">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="{{ $ong['imagen'] }}" class="card-img-top" alt="{{ $ong['nombre'] }}" style="height: 180px; object-fit: cover;">
+                    <div class="card h-100 shadow-sm border border-light rounded-4 overflow-hidden">
                         <div class="card-body p-4">
+                            <span class="badge bg-light text-dark border mb-3">{{ $ong['categoria'] }}</span>
                             <h5 class="fw-bold">{{ $ong['nombre'] }}</h5>
                             <p class="text-sm text-muted mb-3">{{ $ong['descripcion_corta'] }}</p>
                         </div>
@@ -80,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const descArea = document.getElementById('descripcion-area');
     const todasLasOngs = document.querySelectorAll('.tarjeta-ong');
 
-    // Textos dinámicos para la información de cada área
     const infoAreas = {
         'Tecnología': {
             titulo: 'Innovación y Tecnología',
@@ -98,36 +96,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     botones.forEach(boton => {
         boton.addEventListener('click', function() {
-            // 1. Obtener el área a la que se le dio clic
             const areaSeleccionada = this.getAttribute('data-area');
             
-            // 2. Efectos visuales en los botones (opcional, para saber cuál está activo)
             botones.forEach(b => b.style.transform = "scale(1)");
             this.style.transform = "scale(1.03)";
             this.style.transition = "all 0.3s ease";
 
-            // 3. Cambiar los textos del área inferior
             tituloArea.textContent = infoAreas[areaSeleccionada].titulo;
             descArea.textContent = infoAreas[areaSeleccionada].descripcion;
 
-            // 4. Mostrar/Ocultar la sección de resultados
             estadoInicial.classList.add('d-none');
             seccionResultados.classList.remove('d-none');
 
-            // 5. Filtrar las ONGs correspondientes
             todasLasOngs.forEach(tarjeta => {
-                // Ocultamos todas primero
                 tarjeta.style.display = 'none';
                 
-                // Si la tarjeta contiene la clase de la categoría seleccionada, la mostramos
-                // *Nota: EcoTech lo mostramos junto con Ecología o Tecnología para que no quede huérfana
                 if (tarjeta.classList.contains('cat-' + areaSeleccionada) || 
                    (areaSeleccionada === 'Ecología' && tarjeta.classList.contains('cat-EcoTech')) ||
                    (areaSeleccionada === 'Tecnología' && tarjeta.classList.contains('cat-EcoTech'))) {
                     
                     tarjeta.style.display = 'block';
-                    
-                    // Pequeña animación de entrada
                     tarjeta.style.animation = "fadeIn 0.5s ease";
                 }
             });
