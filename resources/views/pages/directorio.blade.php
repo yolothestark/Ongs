@@ -96,7 +96,7 @@
                             <span class="badge bg-primary mb-2">Tecnología</span> <span class="badge bg-secondary mb-2">Local</span>
                             <h5 class="fw-bold">RenuevaTech</h5>
                             <p class="text-sm text-muted">Recolección de hardware para donarlo a estudiantes de la ciudad.</p>
-                            <small class="text-info fw-bold">Donaciones</small>
+                            <a href="{{ route('ong.perfil', 1) }}" class="text-decoration-none"><small class="text-info fw-bold">Donaciones ></small></a>
                         </div>
                     </div>
                 </article>
@@ -107,7 +107,7 @@
                             <span class="badge bg-success mb-2">Ecología</span> <span class="badge bg-secondary mb-2">Regional</span>
                             <h5 class="fw-bold">Bosques Libres</h5>
                             <p class="text-sm text-muted">Brigadas de reforestación en los estados del occidente del país.</p>
-                            <small class="text-info fw-bold">Voluntariado</small>
+                            <a href="{{ route('ong.perfil', 2) }}" class="text-decoration-none"><small class="text-info fw-bold">Voluntariado ></small></a>
                         </div>
                     </div>
                 </article>
@@ -118,7 +118,7 @@
                             <span class="badge bg-warning text-dark mb-2">Educación</span> <span class="badge bg-secondary mb-2">Nacional</span>
                             <h5 class="fw-bold">Código Abierto</h5>
                             <p class="text-sm text-muted">Cursos gratuitos de programación web para jóvenes en todo el país.</p>
-                            <small class="text-info fw-bold">Capacitación</small>
+                            <a href="{{ route('ong.perfil', 3) }}" class="text-decoration-none"><small class="text-info fw-bold">Capacitación ></small></a>
                         </div>
                     </div>
                 </article>
@@ -129,7 +129,7 @@
                             <span class="badge bg-warning text-dark mb-2">Educación</span> <span class="badge bg-secondary mb-2">Local</span>
                             <h5 class="fw-bold">Lectura Para Todos</h5>
                             <p class="text-sm text-muted">Círculos de lectura en bibliotecas públicas municipales.</p>
-                            <small class="text-info fw-bold">Voluntariado</small>
+                            <a href="{{ route('ong.perfil', 4) }}" class="text-decoration-none"><small class="text-info fw-bold">Voluntariado ></small></a>
                         </div>
                     </div>
                 </article>
@@ -140,7 +140,7 @@
                             <span class="badge bg-success mb-2">Ecología</span> <span class="badge bg-secondary mb-2">Nacional</span>
                             <h5 class="fw-bold">Salvemos el Océano</h5>
                             <p class="text-sm text-muted">Fondo nacional para la limpieza de playas y protección marina.</p>
-                            <small class="text-info fw-bold">Donaciones</small>
+                            <a href="{{ route('ong.perfil', 5) }}" class="text-decoration-none"><small class="text-info fw-bold">Donaciones ></small></a>
                         </div>
                     </div>
                 </article>
@@ -151,7 +151,7 @@
                             <span class="badge bg-primary mb-2">Tecnología</span> <span class="badge bg-secondary mb-2">Regional</span>
                             <h5 class="fw-bold">Mujeres en Tech</h5>
                             <p class="text-sm text-muted">Bootcamps intensivos para mujeres interesadas en la ciencia de datos.</p>
-                            <small class="text-info fw-bold">Capacitación</small>
+                            <a href="{{ route('ong.perfil', 6) }}" class="text-decoration-none"><small class="text-info fw-bold">Capacitación ></small></a>
                         </div>
                     </div>
                 </article>
@@ -162,7 +162,7 @@
                             <span class="badge bg-dark mb-2">EcoTech</span> <span class="badge bg-secondary mb-2">Local</span>
                             <h5 class="fw-bold">Reciclaje Inteligente</h5>
                             <p class="text-sm text-muted">Desarrollo de apps para mapear zonas de reciclaje en la ciudad.</p>
-                            <small class="text-info fw-bold">Voluntariado</small>
+                            <a href="{{ route('ong.perfil', 7) }}" class="text-decoration-none"><small class="text-info fw-bold">Voluntariado ></small></a>
                         </div>
                     </div>
                 </article>
@@ -173,7 +173,7 @@
                             <span class="badge bg-warning text-dark mb-2">Educación</span> <span class="badge bg-secondary mb-2">Regional</span>
                             <h5 class="fw-bold">Mochilas Llenas</h5>
                             <p class="text-sm text-muted">Colecta de útiles escolares para comunidades rurales del estado.</p>
-                            <small class="text-info fw-bold">Donaciones</small>
+                            <a href="{{ route('ong.perfil', 8) }}" class="text-decoration-none"><small class="text-info fw-bold">Donaciones ></small></a>
                         </div>
                     </div>
                 </article>
@@ -184,7 +184,7 @@
                             <span class="badge bg-primary mb-2">Tecnología</span> <span class="badge bg-secondary mb-2">Nacional</span>
                             <h5 class="fw-bold">Internet Digno</h5>
                             <p class="text-sm text-muted">Instalación de antenas comunitarias en zonas de difícil acceso.</p>
-                            <small class="text-info fw-bold">Voluntariado</small>
+                            <a href="{{ route('ong.perfil', 9) }}" class="text-decoration-none"><small class="text-info fw-bold">Voluntariado ></small></a>
                         </div>
                     </div>
                 </article>
@@ -195,7 +195,7 @@
                             <span class="badge bg-warning text-dark mb-2">Educación</span> <span class="badge bg-secondary mb-2">Local</span>
                             <h5 class="fw-bold">Aulas Comunitarias</h5>
                             <p class="text-sm text-muted">Talleres de regularización matemática impartidos por universitarios.</p>
-                            <small class="text-info fw-bold">Capacitación</small>
+                            <a href="{{ route('ong.perfil', 10) }}" class="text-decoration-none"><small class="text-info fw-bold">Capacitación ></small></a>
                         </div>
                     </div>
                 </article>
@@ -206,7 +206,7 @@
                             <span class="badge bg-success mb-2">Ecología</span> <span class="badge bg-secondary mb-2">Regional</span>
                             <h5 class="fw-bold">Rescate Animal</h5>
                             <p class="text-sm text-muted">Refugio regional que rehabilita fauna nativa afectada por incendios.</p>
-                            <small class="text-info fw-bold">Donaciones</small>
+                            <a href="{{ route('ong.perfil', 11) }}" class="text-decoration-none"><small class="text-info fw-bold">Donaciones ></small></a>
                         </div>
                     </div>
                 </article>
@@ -217,7 +217,7 @@
                             <span class="badge bg-primary mb-2">Tecnología</span> <span class="badge bg-secondary mb-2">Nacional</span>
                             <h5 class="fw-bold">Programación Kids</h5>
                             <p class="text-sm text-muted">Entrega de mini-ordenadores Raspberry a niños de escasos recursos.</p>
-                            <small class="text-info fw-bold">Donaciones</small>
+                            <a href="{{ route('ong.perfil', 12) }}" class="text-decoration-none"><small class="text-info fw-bold">Donaciones ></small></a>
                         </div>
                     </div>
                 </article>
@@ -227,13 +227,10 @@
     </div>
 </div>
 
-{{-- BLOQUE DE SCRIPTS UNIFICADO (FILTROS + RESALTE) --}}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. INICIALIZAR FILTROS (Mantenemos tu lógica original)
     vincularFiltros();
 
-    // 2. LOGICA DE RESALTE (Actividad JS)
     const productos = document.getElementsByClassName('clase-producto');
 
     function resaltar() {
@@ -257,7 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// --- TUS FUNCIONES DE FILTROS ORIGINALES ---
 function vincularFiltros() {
     document.getElementById('buscador-nombre').addEventListener('keyup', procesarLogicaFiltros);
     document.getElementById('tema-educacion').addEventListener('change', procesarLogicaFiltros);

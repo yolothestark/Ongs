@@ -52,3 +52,8 @@ Route::get('/configuracion-cookies', function () {
 Route::get('/preguntas-frecuentes', function () {
     return view('pages.faq');
 })->name('faq');
+
+use App\Http\Controllers\OngController;
+
+// Esta ruta recibe el ID de la ONG que el usuario seleccione
+Route::get('/directorio/{id}', [OngController::class, 'show'])->name('ong.perfil');
